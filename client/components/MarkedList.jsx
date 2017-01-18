@@ -2,8 +2,8 @@ import React from 'react';
 
 class MarkedList extends React.Component{
 
-  removeTerritory(i, territory){
-    this.props.removeTerritory(i, territory);
+  unmarkTerritory(i, territory){
+    this.props.unmarkTerritory(i, territory);
   }
 
   render(){
@@ -15,7 +15,7 @@ class MarkedList extends React.Component{
             {marked.map((territory, i) => {
                 return (<li key={i}>{territory.name}
                           <button
-                            onClick={this.removeTerritory.bind(this, i, territory)}>X</button>
+                            onClick={this.unmarkTerritory.bind(this, i, territory)}>X</button>
                         </li>)
                   })
               }

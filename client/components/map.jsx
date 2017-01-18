@@ -53,7 +53,7 @@ class TerritoryMap extends React.Component{
       this.markerManager.addToMarked(marker[0]);
     } else {
       let idx = this.props.territories.indexOf(place);
-      this.props.removeTerritory(idx);
+      this.props.unmarkTerritory(idx);
       e.target.textContent = 'Mark';
       marker[0].setIcon(
         "http://res.cloudinary.com/littlef00t/image/upload/v1481759433/ojvig5yzrbwt1fzej4wc.png"
@@ -67,7 +67,7 @@ class TerritoryMap extends React.Component{
     let marker = markers.filter(marker =>
       marker.position === place.geometry.location
     );
-    this.props.removeTerritory(idx);
+    this.props.unmarkTerritory(idx);
     marker[0]['infowindow']['content'].lastChild.lastChild.textContent = 'Mark';
     marker[0].setIcon(
       "http://res.cloudinary.com/littlef00t/image/upload/v1481759433/ojvig5yzrbwt1fzej4wc.png"
@@ -89,7 +89,7 @@ class TerritoryMap extends React.Component{
       <div className='outer-container'>
         <input id='place-input' className='controls' type='text' placeholder='Search for Territories' />
         <div id='map-container' ref='map'></div>
-        <MarkedList {...this.props} removeTerritory={this._removeTerritoryFromList.bind(this)}/>
+        <MarkedList {...this.props} unmarkTerritory={this._removeTerritoryFromList.bind(this)}/>
       </div>
     )
   }

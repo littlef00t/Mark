@@ -1,8 +1,8 @@
 const TerritoriesReducer = (state = [], action) => {
   switch(action.type){
-    case 'REMOVE_TERRITORY':
+    case 'UNMARK_TERRITORY':
       return [ ...state.slice(0, action.index),
-        ...state.slice(action.index + 1) ];
+                ...state.slice(action.index + 1) ];
       break;
     case 'MARK_TERRITORY':
       return [ ...state, action.place];
