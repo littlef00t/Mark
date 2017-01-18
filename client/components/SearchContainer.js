@@ -1,6 +1,6 @@
 //connects state and props to Search
 import { connect } from 'react-redux';
-import Search from './Search';
+import SearchMap from './SearchMap';
 import { unmarkTerritory, toggleMark, markTerritory } from '../actions/territories_actions';
 
 const mapStatetoProps = state => ({
@@ -15,4 +15,4 @@ const mapDispatchtoProps = dispatch => ({
 export default connect(
   mapStatetoProps,
   mapDispatchtoProps
-)(Search);
+)(SearchMap);

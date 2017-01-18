@@ -1,7 +1,7 @@
 import React from 'react';
 import TerritoryMap from './map';
 
-const Search = ({territories, markTerritory, unmarkTerritory}) => (
+const SearchMap = ({territories, markTerritory, unmarkTerritory}) => (
       <div>
         <TerritoryMap territories={territories}
           markTerritory={markTerritory}
@@ -9,4 +9,4 @@ const Search = ({territories, markTerritory, unmarkTerritory}) => (
       </div>
 );
 
-export default Search;
+export default SearchMap;
