@@ -38,7 +38,7 @@ class TerritoryMap extends React.Component{
   }
 
 //add territory to to-do list
-  _markorRemoveTerritory(place, e){
+  _markorUnmarkTerritory(place, e){
     let markers = this.markerManager.getMarkers();
     let marker = markers.filter(marker =>
       marker.position === place.geometry.location
@@ -79,7 +79,7 @@ class TerritoryMap extends React.Component{
     return (
       <div className='info-window'>
         <h3>{place.name}</h3>
-        <button onClick={this._markorRemoveTerritory.bind(this, place)}>Mark</button>
+        <button onClick={this._markorUnmarkTerritory.bind(this, place)}>Mark</button>
       </div>
     )
   }
