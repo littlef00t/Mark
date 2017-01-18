@@ -99,7 +99,7 @@ class TerritoryMap extends React.Component{
   render(){
     return (
       <div className='outer-container'>
-        <input id='place-input' className='controls' type='text' placeholder='Search for Territories' />
+        <input id='place-input' className='search-bar' type='text' placeholder='Search for pee spot' />
         <div id='map-container' ref='map'></div>
         <MarkedList {...this.props} unmarkTerritory={this._removeTerritory.bind(this)}/>
         <div className='legend'>
