@@ -29,11 +29,15 @@ class TerritoryMap extends React.Component{
       this.renderInfoWindow
     );
 
-
-    let input = document.getElementById('place-input');
+//creating and placing searchbox
+    const input = document.getElementById('place-input');
     this.searchBox = new google.maps.places.SearchBox(input);
     this.searchBox.bindTo('bounds', this.map);
     this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+//placing legend on map
+    const legend = document.getElementById('legend');
+    this.map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(legend);
 
 //add listener to searchBox input changed, updates markers
     this.searchBox.addListener('places_changed', () => {
@@ -102,7 +106,7 @@ class TerritoryMap extends React.Component{
         <input id='place-input' className='search-bar' type='text' placeholder='Search for pee spot' />
         <div id='map-container' ref='map'></div>
         <MarkedList {...this.props} unmarkTerritory={this._removeTerritory.bind(this)}/>
-        <div className='legend'>
+        <div id='legend'>
           <p><img src={MARKED_IMAGE} />Territories</p>
           <p className="tag-line"><img src={UNMARKED_IMAGE} />Possible territories</p>
         </div>

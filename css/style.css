@@ -12,7 +12,7 @@
 
 .description {
   font-size: 12px;
-  color: grey;
+  color: #B14AED;
   text-align: center;
   position: relative;
   top: -10px;
@@ -29,16 +29,9 @@
   z-index: 97;
 }
 
-.legend {
-  position: relative;
-  /*background: white;*/
-  left: 5%;
-  top: 50px;
-  width: 200px;
-}
-
 .marked-list {
   position: relative;
+  padding: 5px;
   border: 1px solid black;
   width: 20vw;
   height: 70vh;
@@ -71,13 +64,13 @@
 
 .search-bar {
   margin-top: 10px;
-  border: 1px solid transparent;
+  border: 1px solid #B14AED;
   border-radius: 2px 0 0 2px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   height: 47px;
   padding-left: 10px;
-  width: 170px;
+  width: 20vw;
   outline: none;
   font-size: 13px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
