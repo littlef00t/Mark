@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 import MarkerManager from '../util/markerManager';
 import MarkedList from './MarkedList';
@@ -96,3 +96,9 @@ class TerritoryMap extends React.Component{
 }
 
 export default TerritoryMap;
+
+TerritoryMap.propTypes = {
+  territories: PropTypes.array.isRequired,
+  markTerritory: PropTypes.func.isRequired,
+  unmarkTerritory: PropTypes.func.isRequired
+}

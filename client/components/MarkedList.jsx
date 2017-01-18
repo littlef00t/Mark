@@ -25,3 +25,8 @@ class MarkedList extends React.Component{
 };
 
 export default MarkedList;
+
+MarkedList.propTypes = {
+  unmarkTerritory: PropTypes.func.isRequired,
+  territories: PropTypes.array.isRequired
+}
