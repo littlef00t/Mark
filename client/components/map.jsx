@@ -2,6 +2,7 @@ import React, {PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 import MarkerManager from '../util/markerManager';
 import MarkedList from './MarkedList';
+import territorySchema from '../schemas/territorySchema';
 
 const sf = {lat: 37.7758, lng: -122.435};
 
@@ -109,7 +110,7 @@ class TerritoryMap extends React.Component{
 export default TerritoryMap;
 
 TerritoryMap.propTypes = {
-  territories: PropTypes.array.isRequired,
+  territories: PropTypes.arrayOf(territorySchema).isRequired,
   markTerritory: PropTypes.func.isRequired,
   unmarkTerritory: PropTypes.func.isRequired
 }
