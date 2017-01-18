@@ -14,7 +14,7 @@ class MarkedList extends React.Component{
             {territories.map((territory, i) => {
                 return (<li key={i}>{territory.name}
                           <button
-                            onClick={() => unmarkTerritory(i, territory)}>X</button>
+                            onClick={() => unmarkTerritory(territory)}>X</button>
                         </li>)
                   })
               }

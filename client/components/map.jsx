@@ -45,33 +45,44 @@ class TerritoryMap extends React.Component{
 
 //add territory to to-do list
   _markorUnmarkTerritory(place, e){
-    let markers = this.markerManager.getMarkers();
-    let marker = markers.filter(marker =>
+    const {
+      markTerritory
+    } = this.props;
+
+    const markers = this.markerManager.getMarkers();
+    const marker = markers.filter(marker =>
       marker.position === place.geometry.location
     );
 
     if (e.target.textContent === 'Mark'){
-      this.props.markTerritory(place);
+      markTerritory(place);
       e.target.textContent = 'Undo';
-      marker[0].setIcon(MARKED_IMAGE);
+      marker[0].setIcon(
+        MARKED_IMAGE
+      );
       this.markerManager.addToMarked(marker[0]);
     } else {
-      let idx = this.props.territories.indexOf(place);
-      this.props.unmarkTerritory(idx);
-      e.target.textContent = 'Mark';
-      marker[0].setIcon(UNMARKED_IMAGE);
-      this.markerManager.removeFromMarked(marker[0]);
+      this._removeTerritory(place);
     }
   }
 
-  _removeTerritoryFromList(idx, place){
-    let markers = this.markerManager.getMarkers();
-    let marker = markers.filter(marker =>
+  _removeTerritory(place){
+    const {
+      unmarkTerritory,
+      territories
+    } = this.props;
+
+    const markers = this.markerManager.getMarkers();
+    const marker = markers.filter(marker =>
       marker.position === place.geometry.location
     );
-    this.props.unmarkTerritory(idx);
+
+    const index = territories.indexOf(place);
+    unmarkTerritory(index);
     marker[0]['infowindow']['content'].lastChild.lastChild.textContent = 'Mark';
-    marker[0].setIcon(UNMARKED_IMAGE);
+    marker[0].setIcon(
+      UNMARKED_IMAGE
+    );
     this.markerManager.removeFromMarked(marker[0]);
   }
 
@@ -89,7 +100,7 @@ class TerritoryMap extends React.Component{
       <div className='outer-container'>
         <input id='place-input' className='controls' type='text' placeholder='Search for Territories' />
         <div id='map-container' ref='map'></div>
-        <MarkedList {...this.props} unmarkTerritory={this._removeTerritoryFromList.bind(this)}/>
+        <MarkedList {...this.props} unmarkTerritory={this._removeTerritory.bind(this)}/>
       </div>
     )
   }
