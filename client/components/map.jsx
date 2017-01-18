@@ -8,7 +8,7 @@ const sf = {lat: 37.7758, lng: -122.435};
 
 const _mapOptions = {
   center: sf,
-  zoom: 13
+  zoom: 12
 };
 
 const MARKED_IMAGE =
@@ -102,6 +102,10 @@ class TerritoryMap extends React.Component{
         <input id='place-input' className='controls' type='text' placeholder='Search for Territories' />
         <div id='map-container' ref='map'></div>
         <MarkedList {...this.props} unmarkTerritory={this._removeTerritory.bind(this)}/>
+        <div className='legend'>
+          <p><img src={MARKED_IMAGE} />Territories</p>
+          <p className="tag-line"><img src={UNMARKED_IMAGE} />Possible territories</p>
+        </div>
       </div>
     )
   }
