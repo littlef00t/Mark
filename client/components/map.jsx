@@ -5,10 +5,16 @@ import MarkedList from './MarkedList';
 
 const sf = {lat: 37.7758, lng: -122.435};
 
-let _mapOptions = {
+const _mapOptions = {
   center: sf,
   zoom: 13
 };
+
+const MARKED_IMAGE =
+  "http://res.cloudinary.com/littlef00t/image/upload/v1484540058/darkpurplepawprint_fzt9jb.png";
+
+const UNMARKED_IMAGE =
+  "http://res.cloudinary.com/littlef00t/image/upload/v1481759433/ojvig5yzrbwt1fzej4wc.png";
 
 class TerritoryMap extends React.Component{
   componentDidMount(){
@@ -47,17 +53,13 @@ class TerritoryMap extends React.Component{
     if (e.target.textContent === 'Mark'){
       this.props.markTerritory(place);
       e.target.textContent = 'Undo';
-      marker[0].setIcon(
-        "http://res.cloudinary.com/littlef00t/image/upload/v1484540058/darkpurplepawprint_fzt9jb.png"
-      );
+      marker[0].setIcon(MARKED_IMAGE);
       this.markerManager.addToMarked(marker[0]);
     } else {
       let idx = this.props.territories.indexOf(place);
       this.props.unmarkTerritory(idx);
       e.target.textContent = 'Mark';
-      marker[0].setIcon(
-        "http://res.cloudinary.com/littlef00t/image/upload/v1481759433/ojvig5yzrbwt1fzej4wc.png"
-      );
+      marker[0].setIcon(UNMARKED_IMAGE);
       this.markerManager.removeFromMarked(marker[0]);
     }
   }
@@ -69,9 +71,7 @@ class TerritoryMap extends React.Component{
     );
     this.props.unmarkTerritory(idx);
     marker[0]['infowindow']['content'].lastChild.lastChild.textContent = 'Mark';
-    marker[0].setIcon(
-      "http://res.cloudinary.com/littlef00t/image/upload/v1481759433/ojvig5yzrbwt1fzej4wc.png"
-    );
+    marker[0].setIcon(UNMARKED_IMAGE);
     this.markerManager.removeFromMarked(marker[0]);
   }
 
