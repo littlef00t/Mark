@@ -48,6 +48,7 @@
   border-bottom: none;
   padding: 0px 5px 0px 5px;
   text-align: center;
+  overflow: auto;
 }
 
 .outer-container {
