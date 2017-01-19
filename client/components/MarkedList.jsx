@@ -9,17 +9,22 @@ class MarkedList extends React.Component{
     } = this.props;
     return(
       <div className='marked-list'>
-        <h3 className='vh center'>Marked Territories</h3>
-        <p className='description'>Search on map for territories and mark by clicking on marker</p>
-          <ul className='scroll'>
+        <div className='heading'>
+          <h3>Marked Territories</h3>
+          <p className='description'>Search on map for where you pups have peed and mark by clicking on marker</p>
+        </div>
+        <div className='scroll'>
+          <ul>
             {territories.map((territory, i) => {
-                return (<li key={i}>{territory.name}
-                          <button
-                            onClick={() => unmarkTerritory(territory)}>X</button>
-                        </li>)
-                  })
-              }
+              return (<li key={i}>{territory.name}&nbsp;&nbsp;&nbsp;
+                <button
+                  className='remove-button'
+                  onClick={() => unmarkTerritory(territory)}>X</button>
+              </li>)
+            })
+          }
           </ul>
+        </div>
       </div>
     );
   }

@@ -39,6 +39,9 @@ class TerritoryMap extends React.Component{
     const legend = document.getElementById('legend');
     this.map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(legend);
 
+    // const list = document.getElementById('marked-list');
+    // this.map.controls[google.maps.ControlPosition.TOP_RIGHT].push(list);
+
 //add listener to searchBox input changed, updates markers
     this.searchBox.addListener('places_changed', () => {
       let places = this.searchBox.getPlaces();

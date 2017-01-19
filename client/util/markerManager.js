@@ -47,7 +47,6 @@ export default class MarkerManager {
 
     let infowindow = new google.maps.InfoWindow({
       content: contentString,
-      maxWidth: 150
     });
 
     let pawprint = "http://res.cloudinary.com/littlef00t/image/upload/v1481759433/ojvig5yzrbwt1fzej4wc.png";
