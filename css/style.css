@@ -17,12 +17,16 @@
 .description {
   font-size: 12px;
   color: #B14AED;
+  padding: 0;
 }
 
-.footer {
-  position: relative;
-  text-align: right;
-  right: 30px;
+.heading {
+  height: 25%;
+  border: 1px solid black;
+  border-bottom: none;
+  padding: 0px 5px 0px 5px;
+  text-align: center;
+  overflow: auto;
 }
 
 .info-window {
@@ -37,18 +41,7 @@
   top: 5vh;
   left: 75vw;
   right: -50px;
-  /*margin-left: 3px;*/
-  /*padding-bottom: 5px;*/
   background-color: white;
-}
-
-.heading {
-  height: 25%;
-  border: 1px solid black;
-  border-bottom: none;
-  padding: 0px 5px 0px 5px;
-  text-align: center;
-  overflow: auto;
 }
 
 .outer-container {
@@ -62,16 +55,27 @@
   padding: 10px;
 }
 
+.remove-button {
+  color: #B14AED;
+  opacity: 0.5;
+  font-size:  12px;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.remove-button:hover {
+  font-size: 14px;
+  opacity: 1;
+}
+
 .scroll {
   height: 75%;
   overflow: auto;
   border: 1px solid black;
   border-top: none;
   background: white;
-  /*right: 6px;*/
-  /*top: -15px;
-  width: 18vw;*/
-  padding: 2px;
+  padding: 3px;
 }
 
 .search-bar {
@@ -93,30 +97,26 @@
   top: -15px;
 }
 
-ul {
-  padding-left: 5px;
-  list-style-type: none;
-}
-
 body {
   font-family: 'Lato', sans-serif;
 }
 
-.remove-button {
-  color: #B14AED;
-  opacity: 0.5;
-  font-size:  12px;
-  padding: 0;
-  border: none;
-  background: none;
+button {
+  border: 1px solid #390080;
+  background-color: white;
+  color: black;
+  font-size: 12px;
 }
 
-.remove-button:hover {
-  font-size: 14px;
-  opacity: 1;
+button:focus {
+  outline: 0;
 }
 
 button:hover {
-  -webkit-transform: scale(1.1);
-  visibility: visible;
+  font-size: 13px;
+}
+
+ul {
+  padding-left: 5px;
+  list-style-type: none;
 }

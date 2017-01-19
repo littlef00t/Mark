@@ -11,7 +11,9 @@ class MarkedList extends React.Component{
       <div className='marked-list'>
         <div className='heading'>
           <h3>Marked Territories</h3>
-          <p className='description'>Search map for where you pups have peed and mark by clicking on marker</p>
+          <p className='description'>
+            Search map for where you pups have peed and mark by clicking on marker
+          </p>
         </div>
         <div className='scroll'>
           <ul>

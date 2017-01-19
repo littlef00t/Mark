@@ -98,7 +98,8 @@ class TerritoryMap extends React.Component{
     return (
       <div className='info-window'>
         <h3>{place.name}</h3>
-        <button onClick={this._markorUnmarkTerritory.bind(this, place)}>Mark</button>
+        <button
+          onClick={this._markorUnmarkTerritory.bind(this, place)}>Mark</button>
       </div>
     )
   }
@@ -106,12 +107,18 @@ class TerritoryMap extends React.Component{
   render(){
     return (
       <div className='outer-container'>
-        <input id='place-input' className='search-bar' type='text' placeholder='Search for pee spot' />
-        <div id='map-container' ref='map'></div>
-        <MarkedList {...this.props} unmarkTerritory={this._removeTerritory.bind(this)}/>
+        <input id='place-input'
+          className='search-bar'
+          type='text'
+          placeholder='Search for pee spot' />
+        <div id='map-container'
+          ref='map'></div>
+        <MarkedList {...this.props}
+          unmarkTerritory={this._removeTerritory.bind(this)}/>
         <div id='legend'>
           <p><img src={MARKED_IMAGE} />Territories</p>
-          <p className="tag-line"><img src={UNMARKED_IMAGE} />Possible territories</p>
+          <p className="tag-line">
+            <img src={UNMARKED_IMAGE} />Possible territories</p>
         </div>
       </div>
     )

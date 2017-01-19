@@ -33,7 +33,9 @@ export default class MarkerManager {
 
   _locationsToAdd(){
     const currentMarkers = this.markers.map( marker => marker.id );
-    return this.locations.filter( location => !currentMarkers.includes(location.id));
+    return this.locations.filter(
+      location => !currentMarkers.includes(location.id)
+    );
   }
 
   _markersToRemove(){
