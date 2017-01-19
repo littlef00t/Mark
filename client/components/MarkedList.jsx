@@ -9,7 +9,7 @@ class MarkedList extends React.Component{
     } = this.props;
     return(
       <div className='marked-list'>
-        <h3 className='center'>Marked Territories</h3>
+        <h3 className='vh center'>Marked Territories</h3>
         <p className='description'>Search on map for territories and mark by clicking on marker</p>
           <ul className='scroll'>
             {territories.map((territory, i) => {

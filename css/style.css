@@ -6,6 +6,10 @@
   border: 1px solid black;
 }
 
+#legend {
+  padding-left: 10px;
+}
+
 .center {
   text-align: center;
 }
@@ -16,6 +20,7 @@
   text-align: center;
   position: relative;
   top: -10px;
+  height: 5vh;
 
 }
 
@@ -26,7 +31,7 @@
 }
 
 .info-window {
-  z-index: 97;
+  text-align: center;
 }
 
 .marked-list {
@@ -55,11 +60,11 @@
 .scroll {
   height: 50vh;
   overflow: auto;
-  right: 6px;
+  /*right: 6px;*/
   position: relative;
-  top: -15px;
-  width: 18vw;
-  padding: 8px;
+  /*top: -15px;
+  width: 18vw;*/
+  padding: 2px;
 }
 
 .search-bar {
@@ -79,6 +84,10 @@
 .tag-line {
   position: relative;
   top: -15px;
+}
+
+.vh {
+  height: 5vh;
 }
 
 li {
