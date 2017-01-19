@@ -32,7 +32,6 @@
 
 .marked-list {
   position: relative;
-  border: 1px solid black;
   width: 20vw;
   height: 75vh;
   top: 5vh;
@@ -44,8 +43,9 @@
 }
 
 .heading {
-  border: 1px solid black;
   height: 25%;
+  border: 1px solid black;
+  border-bottom: none;
   padding: 0px 5px 0px 5px;
   text-align: center;
 }
@@ -62,9 +62,11 @@
 }
 
 .scroll {
-  height: 70%;
+  height: 75%;
   overflow: auto;
   border: 1px solid black;
+  border-top: none;
+  background: white;
   /*right: 6px;*/
   /*top: -15px;
   width: 18vw;*/
