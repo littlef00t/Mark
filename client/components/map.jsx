@@ -37,7 +37,7 @@ class TerritoryMap extends React.Component{
 
 //placing legend on map
     const legend = document.getElementById('legend');
-    this.map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(legend);
+    this.map.controls[google.maps.ControlPosition.LEFT_CENTER].push(legend);
 
     // const list = document.getElementById('marked-list');
     // this.map.controls[google.maps.ControlPosition.TOP_RIGHT].push(list);
