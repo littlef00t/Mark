@@ -1,6 +1,8 @@
 # Marked
 
-Marked is a frontend web application built utilizing Google Maps Places API, React, Redux, Webpack, Babel and pure CSS.
+Marked is a frontend web application built utilizing Google Maps Places API, React, Redux, Node(npm), Webpack, Babel and pure CSS.
+
+To see in action: git pull, npm install, run webpack, and open index.html
 
 ## Motivation
 
