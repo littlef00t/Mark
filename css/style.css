@@ -68,7 +68,6 @@
 }
 
 .scroll {
-  /*height: 80%;*/
   height: 55vh;
   overflow: auto;
   border: 1px solid black;
