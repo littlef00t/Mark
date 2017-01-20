@@ -17,11 +17,9 @@
 .description {
   font-size: 13px;
   color: #B14AED;
-  padding: 0;
 }
 
 .heading {
-  height: 25%;
   border: 1px solid black;
   border-bottom: none;
   padding: 0px 5px 0px 5px;
@@ -70,7 +68,8 @@
 }
 
 .scroll {
-  height: 75%;
+  /*height: 80%;*/
+  height: 55vh;
   overflow: auto;
   border: 1px solid black;
   border-top: none;
@@ -114,6 +113,11 @@ button:focus {
 
 button:hover {
   font-size: 13px;
+}
+
+li {
+  padding-left: 5px;
+  padding-bottom: 3px;
 }
 
 ul {
