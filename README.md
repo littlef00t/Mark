@@ -8,7 +8,7 @@ As a huge fan of dogs (especially Akitas), I've noticed how much dogs like to es
 
 ## Functionality
 
-Pups should be able to search on the map for where they have peed or what kind of place they would like to pee at. Marker(s) will pop up that match the search. Click on marker for location name and to mark/undo. Once location is marked, it will be saved and shown in the Marked list box. Action can be undone by removing the location on the list or undoing it in the infowindow. Marked territories will remain on map, until unmarked.
+Pups should be able to search on the map for where they have peed or what kind of place they would like to pee at. Marker(s) will pop up that match the search. Click on marker for location name and to mark/undo. Once location is marked, it will be saved and shown in the Marked list box. Action can be undone by removing the location on the list or undoing it in the infowindow. Marked territories will remain on map through other queries.
 
 * Google Maps API have been utilized to create the map, markers, infowindows, searchBox, and legend.
 
@@ -22,9 +22,10 @@ Pups should be able to search on the map for where they have peed or what kind o
 
 * Legend provided to describe what marked and unmarked territories look like on map.
 
-* MarkedList uses access to the territory state to list names of places marked. Removal on list is connected to map. Once marked territory is removed, the marker associated to the location goes back to unmarked territory color and it is removed from the list. 
+* MarkedList uses access to the territory state to list names of places marked. Removal on list is connected to map. Once marked territory is removed, the marker associated to the location goes back to unmarked territory color and it is removed from the list.
 
 * PropTypes have been added to check if right props are supplied to the component. Schema contains Territory properties needed in state.
+(https://facebook.github.io/react/docs/typechecking-with-proptypes.html)
 
 
 ## Future plans

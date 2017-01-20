@@ -23,11 +23,10 @@
 }
 
 .heading {
-  border: 1px solid black;
-  border-bottom: none;
   padding: 0px 5px 0px 5px;
   text-align: center;
-  overflow: auto;
+  border: 1px solid black;
+  background-color: white;
 }
 
 .info-window {
@@ -43,7 +42,6 @@
   top: 5vh;
   left: 75vw;
   right: -50px;
-  background-color: white;
 }
 
 .outer-container {
@@ -72,12 +70,12 @@
 }
 
 .scroll {
-  height: 55vh;
+  height: 50vh;
   overflow: auto;
-  border: 1px solid black;
-  border-top: none;
   background: white;
   padding: 5px;
+  border: 1px solid black;
+  border-top: none;
 }
 
 .search-bar {

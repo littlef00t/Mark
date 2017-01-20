@@ -1,4 +1,5 @@
 import React, {PropTypes} from 'react';
+import territorySchema from '../schemas/territorySchema';
 
 class MarkedList extends React.Component{
 
@@ -36,5 +37,5 @@ export default MarkedList;
 
 MarkedList.propTypes = {
   unmarkTerritory: PropTypes.func.isRequired,
-  territories: PropTypes.array.isRequired
+  territories: PropTypes.arrayOf(territorySchema).isRequired
 }
